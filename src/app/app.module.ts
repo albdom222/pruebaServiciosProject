@@ -5,11 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { UserListComponent } from './user-list/user-list.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { ProductoComponent } from './producto/producto.component';
+import { EstiloProductosDirective } from './estilo-productos.directive';
+import { TaskListComponent } from './task-list/task-list.component';
+import { HighlightDirective } from './highlight.directive';
+import { MiPipePersonalizadoPipe } from './mi-pipe-personalizado.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserListComponent
+    UserListComponent,
+    UserDetailComponent,
+    ProductoComponent,
+    EstiloProductosDirective,
+    TaskListComponent,
+    HighlightDirective,
+    MiPipePersonalizadoPipe
   ],
   imports: [
     BrowserModule,

@@ -17,9 +17,11 @@
 <ul>
     <li *ngFor="let user of users">
       <span>{{ user.name }} - {{ user.email }}</span>
-      
+
       <button (click)="deleteUser(user.id)">❌ Eliminar</button>
       <button (click)="editUser(user.id)">✏️ Editar</button>
+      <button class="view" (click)="selectUser(user.id)">👁️ Ver Detalles</button>
     </li>
   </ul>
+  <app-user-detail [userId]="selectedUserId"></app-user-detail>
 </div>

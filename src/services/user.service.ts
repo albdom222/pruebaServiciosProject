@@ -44,18 +44,25 @@ export class UserService {
 
   /**
    * Funcion para actualizar un usuario
-   * @param userId 
-   * @param name 
-   * @param email 
+   * @param userId
+   * @param name
+   * @param email
    */
   updateUser(userId: number, name: string, email: string){
     const user = this.users.find(user => user.id === userId);
     if(user){
       user.name = name;
       user.email = email;
-  
+
     }
   }
 
+  /**
+   * Obtiene un usuario a traves del id
+   * @param id
+   */
+  getUserById(id: number){
+    return this.users.find(user => user.id === id);
+  }
 
 }

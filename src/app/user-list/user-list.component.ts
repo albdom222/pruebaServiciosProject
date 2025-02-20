@@ -11,6 +11,7 @@ export class UserListComponent implements OnInit {
   users: any[] = [];
   newName: string = '';
   newEmail: string = '';
+  selectedUserId: number = 0;
 
   constructor(private userService: UserService) {}
 
@@ -31,7 +32,7 @@ export class UserListComponent implements OnInit {
     this.users = this.userService.getUsers();
   }
 
-  
+
   editUser(id: number) {
     const user = this.users.find(u => u.id === id);
     if (user) {
@@ -43,5 +44,8 @@ export class UserListComponent implements OnInit {
       }
     }
   }
-  
+
+  selectUser(id: number) {
+    this.selectedUserId = id;
+  }
 }
