@@ -11,6 +11,7 @@ import { EstiloProductosDirective } from './estilo-productos.directive';
 import { TaskListComponent } from './task-list/task-list.component';
 import { HighlightDirective } from './highlight.directive';
 import { MiPipePersonalizadoPipe } from './mi-pipe-personalizado.pipe';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MiPipePersonalizadoPipe } from './mi-pipe-personalizado.pipe';
     EstiloProductosDirective,
     TaskListComponent,
     HighlightDirective,
-    MiPipePersonalizadoPipe
+    MiPipePersonalizadoPipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

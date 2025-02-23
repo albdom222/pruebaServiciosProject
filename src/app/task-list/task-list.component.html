@@ -1,0 +1,30 @@
+<div class="task-container">
+  <h2>Lista de Tareas</h2>
+  <p>{{date | date:'dd/MM/YY'}}</p>
+
+
+  <!-- Input y botón para agregar tareas -->
+  <div class="input-group">
+    <input type="text" [(ngModel)]="newTask" placeholder="Nueva tarea">
+    <button (click)="addTask()">Agregar</button>
+  </div>
+
+  <!-- Lista de tareas -->
+  <ul>
+    <li appHighlight *ngFor="let task of tasks; let i = index" [ngClass]="{ 'completed': task.completed }">
+      <span appHighlight>{{ task.name | miPipePersonalizado}}</span>
+      <div>
+        <button (click)="toggleTask(i)">✅</button>
+        <button (click)="deleteTask(i)">❌</button>
+        <button (click)="editTask(task.name)">✏️</button>
+      </div>
+    </li>
+  </ul>
+
+  <h2>Lista de Tareas Completadas</h2>
+  <li  *ngFor="let task of tasksCompleted; let i = index">
+    <span appHighlight>{{ task.name }}</span>
+  </li>
+  <!-- Mensaje cuando no hay tareas -->
+  <!--<p *ngIf="tasks.length === 0">No hay tareas pendientes.</p>-->
+</div>
